@@ -182,7 +182,19 @@
     filter:none;
   }
   .card-media.icon-fill img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px #0008);}
+  .card-media.icon-fill svg{width:44px;height:44px;}
   .card.no-photo{padding-left:14px;}
+  .card.primary{
+    background:linear-gradient(135deg,var(--accent-2),var(--accent) 65%,#e8631f);
+    border:none;
+    padding-left:20px;
+    height:auto;
+    min-height:88px;
+    box-shadow:0 6px 24px #ff8a3d44;
+  }
+  .card.primary .card-title{color:#1a0d02;font-size:1.08rem;}
+  .card.primary .card-desc{color:#3a2410;}
+  .card.primary:hover{box-shadow:0 8px 30px #ff8a3d66;}
   .card-body{flex:1;min-width:0;}
   .card-title{
     font-size:1.02rem;
@@ -220,7 +232,7 @@
   .social-icon svg{width:22px;height:22px;}
   .social-icon.tiktok svg{fill:#fff;}
   .social-icon.instagram svg{fill:#fff;}
-  .social-icon.whatsapp svg{fill:#25D366;}
+  .social-icon.whatsapp svg{fill:#fff;}
 
   footer{
     margin-top:28px;
@@ -252,25 +264,36 @@
 
     <nav class="links">
 
-      <a class="card" href="https://wa.me/message/MUP3S67CUXR6E1" target="_blank" rel="noopener">
+      <a class="card no-photo primary"
+        href="https://wa.me/5512997879715"
+        target="_blank"
+        rel="noopener">
+        <div class="card-body">
+          <div class="card-title">Quero conhecer a mentoria</div>
+          <div class="card-desc">Fale comigo agora e entenda como funciona.</div>
+        </div>
+      </a>
+
+      <a class="card" href="https://lasbrabas.vercel.app/" target="_blank" rel="noopener">
         <div class="card-media">
           <img src="assets/academia.png" alt="Las Brabas Fitness">
         </div>
         <div class="card-body">
-          <div class="card-title">Comercial e Vendas</div>
-          <div class="card-desc">CT Las Brabas Fitness — fale direto no WhatsApp e tire suas dúvidas.</div>
+          <div class="card-title">Conheça minha academia</div>
+          <div class="card-desc">CT Las Brabas Fitness — prova de que ela vive aquilo que ensina.</div>
         </div>
       </a>
 
       <a class="card" href="https://tiktok.com/@brabasdaily" target="_blank" rel="noopener">
         <div class="card-media">
-          <img src="assets/tiktok.png" alt="TikTok Barbara Midori">
+          <img src="assets/tiktok.png" alt="Conteúdos gratuitos">
         </div>
         <div class="card-body">
-          <div class="card-title">TikTok</div>
-          <div class="card-desc">Vídeos rápidos sobre negócios para profissionais de Ed. Física.</div>
+          <div class="card-title">Conteúdos gratuitos</div>
+          <div class="card-desc">Estratégias de vendas, posicionamento e negócios para profissionais de Ed. Física.</div>
         </div>
       </a>
+
 
     </nav>
 
