@@ -7,16 +7,19 @@
 <meta name="description" content="Mentoria para Profissionais de Ed. Física que querem transformar conhecimento técnico em negócio.">
 <style>
   :root{
-    --bg:#0a0a0a;
-    --card-bg:#111213;
-    --cyan:#22d3ee;
-    --title:#7c6bff;
-    --text-dim:#c7c9d1;
+    --bg:#0a0705;
+    --card-bg:#1a1209;
+    --accent:#ff8a3d;
+    --accent-2:#ffb35c;
+    --title:#ff9a3d;
+    --text-dim:#d8cfc2;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
     font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
-    background:var(--bg);
+    background:
+      radial-gradient(circle at 50% 0%, #331a0a 0%, transparent 55%),
+      var(--bg);
     color:#fff;
     display:flex;
     justify-content:center;
@@ -66,23 +69,60 @@
     -webkit-mask-image:linear-gradient(to bottom, #000 78%, transparent 100%);
     mask-image:linear-gradient(to bottom, #000 78%, transparent 100%);
   }
+  .brand-badge{
+    position:absolute;
+    right:20px;
+    bottom:14%;
+    z-index:2;
+    width:82px;
+    height:82px;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 6px 20px #000a, 0 0 0 4px #0a0a0a, 0 0 0 7px #ff9a3d88;
+  }
+  .brand-badge img{width:100%;height:100%;object-fit:cover;}
 
   .name-block{
     text-align:center;
-    margin-top:-6px;
     z-index:1;
+    padding:22px 28px 6px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+  .name-logo{
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 0 0 3px #ff9a3d55, 0 6px 20px #ff9a3d33;
+  }
+  .name-logo img{width:100%;height:100%;object-fit:cover;}
+  .brand-label{
+    font-size:1.05rem;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    background:linear-gradient(90deg,var(--accent-2),var(--accent));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
   }
   h1{
-    font-size:1.55rem;
-    font-weight:800;
-    letter-spacing:1px;
+    font-size:1.3rem;
+    font-weight:700;
+    letter-spacing:.6px;
     text-transform:uppercase;
+    color:#f5efe8;
   }
   .subtitle{
     margin-top:2px;
     font-size:.85rem;
     color:var(--text-dim);
     font-weight:500;
+    line-height:1.55;
+    max-width:320px;
   }
 
   /* ---- Cards ---- */
@@ -99,19 +139,19 @@
     align-items:center;
     gap:14px;
     background:var(--card-bg);
-    border:1.5px solid var(--cyan);
+    border:1.5px solid var(--accent);
     border-radius:14px;
     padding:14px 14px 14px 92px;
     height:104px;
     text-decoration:none;
     color:#fff;
     overflow:visible;
-    box-shadow:0 0 0 rgba(34,211,238,0);
+    box-shadow:0 0 0 rgba(255,138,61,0);
     transition:transform .15s ease, box-shadow .15s ease;
   }
   .card:hover{
     transform:translateY(-2px);
-    box-shadow:0 4px 20px #22d3ee33;
+    box-shadow:0 4px 20px #ff8a3d33;
   }
   .card-media{
     position:absolute;
@@ -169,7 +209,7 @@
     height:46px;
     border-radius:50%;
     background:#000;
-    border:1px solid #ffffff22;
+    border:1px solid #ff8a3d33;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -185,9 +225,10 @@
   footer{
     margin-top:28px;
     font-size:.7rem;
-    color:#6b7290;
+    color:#8a7f70;
     letter-spacing:.4px;
   }
+  footer strong{color:var(--accent-2);}
 </style>
 </head>
 <body>
@@ -201,6 +242,10 @@
     </div>
 
     <div class="name-block">
+      <div class="name-logo">
+        <img src="assets/marca_mentoria.png" alt="Leef Club">
+      </div>
+      <div class="brand-label">Leef Club</div>
       <h1>Barbara Midori</h1>
       <div class="subtitle">Mentoria para Profissionais de Ed. Física que querem transformar conhecimento técnico em negócio. Construa sua comunidade com liberdade e propósito!</div>
     </div>
@@ -208,7 +253,7 @@
     <nav class="links">
 
       <a class="card" href="https://wa.me/message/MUP3S67CUXR6E1" target="_blank" rel="noopener">
-        <div class="card-media ">
+        <div class="card-media">
           <img src="assets/academia.png" alt="Las Brabas Fitness">
         </div>
         <div class="card-body">
@@ -241,7 +286,7 @@
       </a>
     </div>
 
-    <footer>Mentora · Leef Club</footer>
+    <footer>Mentora · <strong>Leef Club</strong></footer>
   </main>
 </body>
 </html>
