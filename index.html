@@ -187,10 +187,16 @@
   .card.primary{
     background:linear-gradient(135deg,var(--accent-2),var(--accent) 65%,#e8631f);
     border:none;
-    padding-left:20px;
     height:auto;
     min-height:88px;
     box-shadow:0 6px 24px #ff8a3d44;
+  }
+  .card.primary .card-media{
+    top:auto;
+    bottom:0;
+    left:-10px;
+    width:88px;
+    height:112px;
   }
   .card.primary .card-title{color:#1a0d02;font-size:1.08rem;}
   .card.primary .card-desc{color:#3a2410;}
@@ -264,10 +270,13 @@
 
     <nav class="links">
 
-      <a class="card no-photo primary"
+      <a class="card primary"
         href="https://wa.me/5512997879715"
         target="_blank"
         rel="noopener">
+        <div class="card-media">
+          <img src="assets/barbara_sem_fundo.png" alt="Barbara Midori">
+        </div>
         <div class="card-body">
           <div class="card-title">Quero conhecer a mentoria</div>
           <div class="card-desc">Fale comigo agora e entenda como funciona.</div>
@@ -286,7 +295,7 @@
 
       <a class="card" href="https://tiktok.com/@brabasdaily" target="_blank" rel="noopener">
         <div class="card-media">
-          <img src="assets/tiktok.png" alt="Conteúdos gratuitos">
+          <img src="assets/tiktok.jpeg" alt="Conteúdos gratuitos">
         </div>
         <div class="card-body">
           <div class="card-title">Conteúdos gratuitos</div>
